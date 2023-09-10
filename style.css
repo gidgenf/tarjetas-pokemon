@@ -1,0 +1,144 @@
+#contenedor {
+    border: solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+#contenedor:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px black;
+}
+
+img {
+    height: 300px;
+    border: solid #ffe44e;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+    margin-top: 10px;
+}
+
+.types {
+    background-color: lightblue;
+    border: solid #272620;
+    float: right;
+    margin-right: 30px;
+    padding: 10px;
+    font-size: x-large;
+    box-shadow: 1px 1px 1px black;
+}
+
+h1 {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    font-style: unset;
+}
+
+#pokeName {
+    font-size: xx-large;
+    border: solid #fff3bf;
+    border-radius: 10px;
+    padding: 10px;
+    width: 160px;
+    margin-right: 100px;
+    margin-left: 100px;
+    text-align: center;
+    background: #ffec40;
+    box-shadow: 1px 1px 1px black;
+}
+
+p,
+h1::first-letter {
+    text-transform: capitalize;
+}
+
+#stats {
+    font-size: small;
+    border: solid #fff3bf;
+    border-radius: 10px;
+    width: 230px;
+    background: #ffec40;
+    box-shadow: 1px 1px 1px black;
+}
+
+.types,
+#stats {
+    display: inline-block;
+}
+
+.bug {
+    background-color: green;
+}
+
+.fire {
+    background-color: orangered;
+}
+
+.water {
+    background-color: lightseagreen;
+}
+
+.rock {
+    background-color: rgba(121, 30, 30);
+}
+
+.dark {
+    background-color: darkslategrey;
+}
+
+.flying {
+    background-color: lightcyan;
+}
+
+.ghost {
+    background-color: rgb(26, 23, 80);
+}
+
+.normal {
+    background-color: rgb(211, 211, 211);
+}
+
+.poison {
+    background-color: blueviolet;
+}
+
+.psychic {
+    background-color: rgb(145, 12, 74);
+}
+
+.steel {
+    background-color: rgb(71, 121, 90);
+}
+
+.ice {
+    background-color: rgb(138, 232, 255);
+}
+
+.fighting {
+    background-color: rgb(202, 61, 51);
+}
+
+.ground {
+    background-color: rgb(172, 107, 23);
+}
+
+.dragon {
+    background-color: rgb(76, 134, 148);
+}
+
+.grass {
+    background-color: rgb(21, 100, 21);
+}
+
+.fairy {
+    background-color: rgb(112, 7, 56);
+}
+
+.electric {
+    background-color: #ffde22;
+}
