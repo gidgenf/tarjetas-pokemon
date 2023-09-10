@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h1>Spd: ${data.stats[5].base_stat}</h1>
                 </div>`;
                 showTypes(data);
-                changeBackgroundColor(data);
             })
             .catch(error => {
                 console.error('Error', error);
@@ -42,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         data.types.forEach(typeInfo => {
             const typeName = typeInfo.type.name;
-            const typeItem = document.createElement('p');  // se les asigna una clase a su respectivo parrafo segun su tipo
-            typeItem.classList.add(typeName);
+            const typeItem = document.createElement('p');
+            typeItem.classList.add(typeName); // se les asigna una clase a su respectivo parrafo segun su tipo
             typeItem.textContent = typeName;
             typesList.appendChild(typeItem);
 
