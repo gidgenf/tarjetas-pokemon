@@ -1,52 +1,65 @@
-#contenedor {
-    border: solid #333;
-    border-radius: 10px;
-    padding: 10px;
-    width: 400px;
+.tarjeta {
+    border: solid #4d3636;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
     margin: auto;
     text-align: center;
 }
 
-#contenedor:hover {
-    transform: translateY(-10px);
-    box-shadow: 10px 10px 10px black;
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 5px black;
+
 }
 
 img {
-    height: 300px;
+    height: 150px;
     border: solid #ffe44e;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 1px 1px 1px black;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .types {
-    background-color: lightblue;
+    background-color: rgb(209, 209, 209);
     border: solid #272620;
     float: right;
-    margin-right: 30px;
-    padding: 10px;
+    padding: 5px;
     font-size: x-large;
     box-shadow: 1px 1px 1px black;
+    height: 75px;
+    width: 60px;
+    border-radius: 5px;
 }
 
 h1 {
     float: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: -1px;
     margin-bottom: -1px;
     font-style: unset;
+    font-size: small;
+}
+
+h2 {
+    font-size: small;
 }
 
 #pokeName {
-    font-size: xx-large;
+    font-size: x-large;
     border: solid #fff3bf;
-    border-radius: 10px;
-    padding: 10px;
-    width: 160px;
-    margin-right: 100px;
-    margin-left: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    margin-left: 16px;
     text-align: center;
     background: #ffec40;
     box-shadow: 1px 1px 1px black;
@@ -60,10 +73,14 @@ h1::first-letter {
 #stats {
     font-size: small;
     border: solid #fff3bf;
-    border-radius: 10px;
-    width: 230px;
+    border-radius: 5px;
+    width: 115px;
     background: #ffec40;
     box-shadow: 1px 1px 1px black;
+}
+
+.types h2 {
+    border-radius: 10px;
 }
 
 .types,
@@ -100,7 +117,7 @@ h1::first-letter {
 }
 
 .normal {
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(141, 141, 141);
 }
 
 .poison {
