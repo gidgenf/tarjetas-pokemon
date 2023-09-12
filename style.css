@@ -5,6 +5,7 @@
     width: 200px;
     margin: auto;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 #contenedor {
@@ -14,9 +15,14 @@
 }
 
 .tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 5px 5px 5px black;
+    border-color: rgb(241, 234, 133);
+}
 
+.tarjeta-grande {
+    transform: scale(2.0);
+    transition: transform 0.3s;
+    box-shadow: 5px 5px 5px black;
+    z-index: 1;
 }
 
 img {
@@ -39,17 +45,13 @@ img {
     border-radius: 5px;
 }
 
-h1 {
+p {
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: -1px;
     margin-bottom: -1px;
     font-style: unset;
-    font-size: small;
-}
-
-h2 {
     font-size: small;
 }
 
@@ -79,8 +81,13 @@ h1::first-letter {
     box-shadow: 1px 1px 1px black;
 }
 
-.types h2 {
-    border-radius: 10px;
+.types p {
+    width: 45px;
+    border-radius: 5px;
+    font-size: medium;
+    padding: 2px;
+    margin: 5px;
+    margin-top: 10px;
 }
 
 .types,
@@ -94,6 +101,10 @@ h1::first-letter {
 
 .fire {
     background-color: orangered;
+}
+
+.tarjeta.fire {
+    background-image: url('/img/Texto del párrafo (2).png');
 }
 
 .water {

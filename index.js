@@ -82,25 +82,52 @@ document.addEventListener('DOMContentLoaded', () => {
     function showCard(data) {  //funcion que genera la estructura de la tarjeta en base a datos
         const tarjeta =                     //interpolacion de clases de la tarjeta segun los tipos del pokemon
             `<div class="tarjeta ${data.types[0].type.name} ${data.types[1] ? data.types[1].type.name : ''}">  
-                <h1 id="pokeid">${data.id}</h1>
-                <h1 id="pokeName">${data.name}</h1>
+                <p id="pokeid">${data.id}</p>
+                <p id="pokeName">${data.name}</p>
                 <img src="${data.sprites.front_default}">
                 <div id="stats">
-                    <h1>HP: ${data.stats[0].base_stat}</h1>
-                    <h1>Atk: ${data.stats[1].base_stat}</h1>
-                    <h1>Def: ${data.stats[2].base_stat}</h1>
-                    <h1>AtkSp: ${data.stats[3].base_stat}</h1>    
-                    <h1>DefSp: ${data.stats[4].base_stat}</h1>
-                    <h1>Spd: ${data.stats[5].base_stat}</h1>
+                    <p>HP: ${data.stats[0].base_stat}</p>
+                    <p>Atk: ${data.stats[1].base_stat}</p>
+                    <p>Def: ${data.stats[2].base_stat}</p>
+                    <p>AtkSp: ${data.stats[3].base_stat}</p>    
+                    <p>DefSp: ${data.stats[4].base_stat}</p>
+                    <p>Spd: ${data.stats[5].base_stat}</p>
                 </div>
                 <div class="types">
-                    <h2 class="${data.types[0].type.name}">${data.types[0].type.name}</h2>
-                    <h2 class="${data.types[1] ? data.types[1].type.name : ''}">${data.types[1] ? data.types[1].type.name : ''}</h2>
+                    <p class="${data.types[0].type.name}">${data.types[0].type.name}</p>
+                    <p class="${data.types[1] ? data.types[1].type.name : ''}">${data.types[1] ? data.types[1].type.name : ''}</p>
                 </div>
             </div>`;
 
-        container.insertAdjacentHTML('beforeend', tarjeta);  //intenta de antemano ordenar las tarjetas(funciona un poco solamente)
+
+        const cardElement = document.createElement('div');  //se crea un elemento div "cardElement"
+        cardElement.innerHTML = tarjeta;   //se le agrega la tarjeta
+        const classCard = cardElement.querySelector('.tarjeta');  
+
+        cardElement.addEventListener('click', () => {  //al hacer click sobre la tarjeta se declara maxCard que es el elemento con clase tarjeta-grande
+
+            const maxCard = document.querySelector('.tarjeta-grande');
+            if (maxCard) {
+                maxCard.classList.remove('tarjeta-grande');  //si la tarjeta grande existe, remueve la clase y pasa a ser normal
+                maxCard.classList.add('tarjeta-normal');
+            }
+
+            classCard.classList.add('tarjeta-grande');   //se agrega la clase tarjeta grande y se remueve la normal
+            classCard.classList.remove('tarjeta-normal');
+        });
+
+        container.appendChild(cardElement);
+
+        classCard.addEventListener('mouseleave', () => {   //cuando el mouse deja de estar sobre la tarjeta agrandada, esta vuelve al estado normal de forma gradual
+            classCard.classList.remove('tarjeta-grande');
+            setTimeout(() => {
+                classCard.classList.add('tarjeta-normal');
+            }, 300);
+        });
+
     }
 
     fetchPokemonData();
+
 });
+
