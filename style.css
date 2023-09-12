@@ -104,7 +104,9 @@ h1::first-letter {
 }
 
 .tarjeta.fire {
-    background-image: url('/img/Texto del párrafo (2).png');
+    background-image: url('/img/Texto del párrafo (2).png'); /* Ruta corregida de la imagen */
+    background-size: cover; /* Para ajustar la imagen al tamaño de la tarjeta */
+    background-repeat: no-repeat;
 }
 
 .water {
