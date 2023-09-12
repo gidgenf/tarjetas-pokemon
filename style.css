@@ -95,6 +95,10 @@ h1::first-letter {
     display: inline-block;
 }
 
+.flying {
+    background-color: lightcyan;
+}
+
 .bug {
     background-color: green;
 }
@@ -104,8 +108,28 @@ h1::first-letter {
 }
 
 .tarjeta.fire {
-    background-image: url('/img/Texto del párrafo (2).png'); /* Ruta corregida de la imagen */
-    background-size: cover; /* Para ajustar la imagen al tamaño de la tarjeta */
+    background-image: url('/img/fire.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.electric {
+    background-color: #ffde22;
+}
+
+.tarjeta.electric {
+    background-image: url('/img/rayoblanco.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rock {
+    background-color: rgb(54, 44, 22);
+}
+
+.tarjeta.rock {
+    background-image: url('/img/rock.png');
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -113,16 +137,14 @@ h1::first-letter {
     background-color: lightseagreen;
 }
 
-.rock {
-    background-color: rgba(121, 30, 30);
+.tarjeta.water {
+    background-image: url('/img/water.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .dark {
     background-color: darkslategrey;
-}
-
-.flying {
-    background-color: lightcyan;
 }
 
 .ghost {
@@ -149,8 +171,24 @@ h1::first-letter {
     background-color: rgb(138, 232, 255);
 }
 
+.tarjeta.ice {
+    background-image: url('/img/ice.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .fighting {
     background-color: rgb(202, 61, 51);
+}
+
+.grass {
+    background-color: rgb(21, 100, 21);
+}
+
+.tarjeta.grass {
+    background-image: url('/img/grass.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .ground {
@@ -161,14 +199,12 @@ h1::first-letter {
     background-color: rgb(76, 134, 148);
 }
 
-.grass {
-    background-color: rgb(21, 100, 21);
+.tarjeta.dragon {
+    background-image: url('/img/dragon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .fairy {
     background-color: rgb(255, 80, 162);
-}
-
-.electric {
-    background-color: #ffde22;
 }

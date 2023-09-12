@@ -7,22 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cantPokePage = 60;
     let currentPage = 1;
 
-    //ordenado de tarjetas con evento click de forma ascendente en caso de que se desordenen solas
-    btnSort.addEventListener('click', () => {
-        const cards = Array.from(container.querySelectorAll('.tarjeta'));  //array de los div de clase tarjeta dentro de container
-
-        cards.sort((a, b) => {
-            const idA = parseInt(a.querySelector('#pokeid').textContent);
-            const idB = parseInt(b.querySelector('#pokeid').textContent);
-            return idA - idB;
-        });
-        container.innerHTML = '';
-
-        cards.forEach(card => {
-            container.appendChild(card);
-        });
-    });
-
     btnNext.addEventListener('click', () => {  //evento click en next que cambia de pagina a la siguiente
         currentPage++;
         fetchPokemonData();
@@ -56,7 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     isLoading = false;
                 });
         }
+        sortCards()
     }
+
+    //ordenado de tarjetas con evento click de forma ascendente en caso de que se desordenen solas
+    btnSort.addEventListener('click', sortCards)
+
+    function sortCards() {
+        const cards = Array.from(container.querySelectorAll('.tarjeta'));  //array de los div de clase tarjeta dentro de container
+
+        cards.sort((a, b) => {
+            const idA = parseInt(a.querySelector('#pokeid').textContent);
+            const idB = parseInt(b.querySelector('#pokeid').textContent);
+            return idA - idB;
+        });
+
+        container.innerHTML = '';
+
+        cards.forEach(card => {
+            container.appendChild(card);
+        });
+    };
 
     const searchButton = document.querySelector('.submit'); // Selección del botón de envío
 
@@ -99,10 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`;
 
-
         const cardElement = document.createElement('div');  //se crea un elemento div "cardElement"
         cardElement.innerHTML = tarjeta;   //se le agrega la tarjeta
-        const classCard = cardElement.querySelector('.tarjeta');  
+        const classCard = cardElement.querySelector('.tarjeta');
 
         cardElement.addEventListener('click', () => {  //al hacer click sobre la tarjeta se declara maxCard que es el elemento con clase tarjeta-grande
 
