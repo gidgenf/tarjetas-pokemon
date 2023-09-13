@@ -1,3 +1,7 @@
+body {
+    background-image: url('/img/fondoPoke.png');
+}
+
 .tarjeta {
     border: solid #4d3636;
     border-radius: 5px;
@@ -6,6 +10,60 @@
     margin: auto;
     text-align: center;
     transition: transform 0.3s ease;
+}
+
+#buttons {
+    background-color: aliceblue;
+    padding: 10px;
+    border: solid #4d3636;
+    background-color: #468f3c;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#submitbtn {
+    height: 60px;
+    width: 100px;
+}
+
+#search {
+    border: solid #468f3c;
+    width: 800px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+#searchDiv {
+    overflow: wrap;
+    height: 150px;
+    width: 270px;
+    border-radius: 5px;
+    border: solid #468f3c;
+    padding: 5px;
+    float: inline-start;
+    display: flex;
+}
+
+#prevPage,
+#nextPage,
+#btnSort {
+    border: solid #bebeba;
+    border-radius: 5px;
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+    font-size: x-large;
+}
+
+#btnSort {
+    float: right;
+}
+
+#prevPage {
+    float: left;
 }
 
 #contenedor {
