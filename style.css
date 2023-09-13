@@ -1,5 +1,5 @@
 body {
-    background-image: url('/img/fondoPoke.png');
+    background-image: url('img/fondoPoke.png');
 }
 
 .tarjeta {
@@ -165,7 +165,7 @@ h1::first-letter {
 }
 
 .tarjeta.fire {
-    background-image: url('/img/fire.png');
+    background-image: url('img/fire.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -175,7 +175,7 @@ h1::first-letter {
 }
 
 .tarjeta.electric {
-    background-image: url('/img/rayoblanco.png');
+    background-image: url('img/rayoblanco.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -185,7 +185,7 @@ h1::first-letter {
 }
 
 .tarjeta.rock {
-    background-image: url('/img/rock.png');
+    background-image: url('img/rock.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -195,7 +195,7 @@ h1::first-letter {
 }
 
 .tarjeta.water {
-    background-image: url('/img/water.png');
+    background-image: url('img/water.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -229,7 +229,7 @@ h1::first-letter {
 }
 
 .tarjeta.ice {
-    background-image: url('/img/ice.png');
+    background-image: url('img/ice.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -243,7 +243,7 @@ h1::first-letter {
 }
 
 .tarjeta.grass {
-    background-image: url('/img/grass.png');
+    background-image: url('img/grass.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -257,7 +257,7 @@ h1::first-letter {
 }
 
 .tarjeta.dragon {
-    background-image: url('/img/dragon.png');
+    background-image: url('img/dragon.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
