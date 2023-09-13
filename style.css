@@ -39,10 +39,8 @@ body {
 
 #searchDiv {
     overflow: wrap;
-    height: 150px;
+    height: 100px;
     width: 270px;
-    border-radius: 5px;
-    border: solid #468f3c;
     padding: 5px;
     float: inline-start;
     display: flex;
