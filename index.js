@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showCard(data) {  //funcion que genera la estructura de la tarjeta en base a datos
         const tarjeta =                     //interpolacion de clases de la tarjeta segun los tipos del pokemon
-            `<div class="tarjeta ${data.types[0].type.name} ${data.types[1] ? data.types[1].type.name : ''}">  
+            `<div class="text-center tarjeta mt-2 border border-3 border-warning ${data.types[0].type.name} ${data.types[1] ? data.types[1].type.name : ''}">  
                 <p id="pokeid">${data.id}</p>
                 <p id="pokeName">${data.name}</p>
-                <img src="${data.sprites.front_default}">
-                <div id="stats">
+                <img class="rounded border border-3 border-warning " src="${data.sprites.front_default}">
+                <div class="bg-warning mx-5 mt-5 border border-3 rounded" id="stats">
                     <p>HP: ${data.stats[0].base_stat}</p>
                     <p>Atk: ${data.stats[1].base_stat}</p>
                     <p>Def: ${data.stats[2].base_stat}</p>
