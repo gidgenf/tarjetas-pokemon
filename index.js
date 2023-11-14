@@ -84,28 +84,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function showCard(data) {  //funcion que genera la estructura de la tarjeta en base a datos
-        const tarjeta =                     //interpolacion de clases de la tarjeta segun los tipos del pokemon
-            `<div class="text-center tarjeta mt-2 border border-3 border-warning ${data.types[0].type.name} ${data.types[1] ? data.types[1].type.name : ''}">  
-                <p id="pokeid">${data.id}</p>
-                <p id="pokeName">${data.name}</p>
-                <img class="rounded border border-3 border-warning " src="${data.sprites.front_default}">
-                <div class="bg-warning mx-5 mt-5 border border-3 rounded" id="stats">
-                    <p>HP: ${data.stats[0].base_stat}</p>
-                    <p>Atk: ${data.stats[1].base_stat}</p>
-                    <p>Def: ${data.stats[2].base_stat}</p>
-                    <p>AtkSp: ${data.stats[3].base_stat}</p>    
-                    <p>DefSp: ${data.stats[4].base_stat}</p>
-                    <p>Spd: ${data.stats[5].base_stat}</p>
+        const tarjeta =
+            `<div class="tarjeta col-lg-3 col-md-4 col-sm-6 col-8 text-center ${data.types[0].type.name} ${data.types[1] ? data.types[1].type.name : ''}">
+            <div class="row justify-content-center">
+                <p id="pokeid" class="float-start">${data.id}</p>
+                <p id="pokeName" class="">${data.name}</p>
+            </div>
+            <div class="container row mx-auto">
+                <img class="img-fluid mx-auto" src="${data.sprites.front_default}" style="max-width: 200px; max-height: 200px;>
+            </div>
+            <div class="row">
+                <div id="stats" class="col-6 text-center mx-1 my-1">
+                    <p class="my-0">HP: ${data.stats[0].base_stat}</p>
+                    <p class="my-0">Atk: ${data.stats[1].base_stat}</p>
+                    <p class="my-0">Def: ${data.stats[2].base_stat}</p>
+                    <p class="my-0">AtkSp: ${data.stats[3].base_stat}</p>
+                    <p class="my-0">DefSp: ${data.stats[4].base_stat}</p>
+                    <p class="my-0">Spd: ${data.stats[5].base_stat}</p>
                 </div>
-                <div class="types">
-                    <p class="${data.types[0].type.name}">${data.types[0].type.name}</p>
-                    <p class="${data.types[1] ? data.types[1].type.name : ''}">${data.types[1] ? data.types[1].type.name : ''}</p>
+                <div class="types col-4 justify-content-center mx-1 my-1">
+                    <p class="my-2 ${data.types[0].type.name}">${data.types[0].type.name}</p>
+                    <p class="my-2 ${data.types[1] ? data.types[1].type.name : ''}">${data.types[1] ?
+                data.types[1].type.name : ''}</p>
                 </div>
-            </div>`;
+            </div>
+        </div>`;
 
-        const cardElement = document.createElement('div');  //se crea un elemento div "cardElement"
-        cardElement.innerHTML = tarjeta;   //se le agrega la tarjeta
-        const classCard = cardElement.querySelector('.tarjeta');
+        container.innerHTML += tarjeta;
+
 
         cardElement.addEventListener('click', () => {  //al hacer click sobre la tarjeta se declara maxCard que es el elemento con clase tarjeta-grande
 
